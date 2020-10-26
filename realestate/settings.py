@@ -80,9 +80,9 @@ WSGI_APPLICATION = 'realestate.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'realestatedb',
+        'NAME': 'realestate',
         'USER': 'postgres',
-        'PASSWORD': 'StrawberryJam',
+        'PASSWORD': 'Borninthe90s!',
         'HOST': 'localhost',
     }
 }
@@ -129,3 +129,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'realestate/static')
 ]
+
+#Media Folder Settings
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
