@@ -4423,9 +4423,8 @@ button.bg-dark:focus {
   border-top-left-radius: 0.25rem !important;
   border-bottom-left-radius: 0.25rem !important; }
 
-.rounded-circle {
-  border-radius: 50% !important; }
-
+/*.rounded-circle {
+*/
 .rounded-0 {
   border-radius: 0 !important; }
 

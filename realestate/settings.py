@@ -37,11 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'contacts.apps.ContactsConfig',
     'django.contrib.staticfiles',
     'pages.apps.PagesConfig',
     'listings.apps.ListingsConfig',
     'agents.apps.AgentsConfig',
     'django.contrib.humanize',
+    'accounts.apps.AccountsConfig',
 ]
 
 MIDDLEWARE = [
@@ -134,3 +136,28 @@ STATICFILES_DIRS = [
 #Media Folder Settings
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+#Messages
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger'
+}
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass
+
+from django.urls import reverse_lazy
+
+LOGIN_REDIRECT_URL = reverse_lazy('account:dashboard')
+LOGIN_URL = reverse_lazy('account:login')
+LOGOUT_REDIRECT_URL = reverse_lazy('account:logout')
+
+# #Email config
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_PORT = 587
+# EMAIL_HOST_USER = os.environ['EMAIL'] 
+# EMAIL_HOST_PASSWORD = os.environ['PASSWORD']
+# EMAIL_USE_TLS = True
+
