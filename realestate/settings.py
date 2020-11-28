@@ -161,3 +161,8 @@ LOGOUT_REDIRECT_URL = reverse_lazy('account:logout')
 # EMAIL_HOST_PASSWORD = os.environ['PASSWORD']
 # EMAIL_USE_TLS = True
 
+try:
+    from .local_settings import *
+except ImportError:
+    pass
+
