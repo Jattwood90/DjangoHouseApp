@@ -1,8 +1,8 @@
 # DjangoHouseApp
 App made in Django, which uses Bootstrap, PostgresSQL and Nginx. Website is an estate agents site, which uses listings from a Postgres database 
-to display on the domain. There is an admin page, which has been set up with the database, so that users can add houses or estate agents.
+to display on the domain. There is a back-end admin page, which has been set up with the database, so that users can add houses or estate agents.
 
-Producing this django app taught me how to integrate a front-end product with the back-end solutions provided by Django, use of the UNIX terminal as well as remote accessing a Linux server on Digital Ocean, and how to create and use a Postgresql data base, that serves dynamic content to the front end UI.
+Producing this django app taught me how to integrate a front-end product with the back-end solutions provided by Django, and use of the UNIX terminal. To host the project I used SSH to connect with a remote Linux Ubuntu server, in order to transfer the Django project, and database to the Digital Ocean cloud server.
 
 
 [Click here to see the finished project!](http://144.126.192.44/)
